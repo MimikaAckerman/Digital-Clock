@@ -8,8 +8,9 @@ function clockTime() {
   //now we need a created a conditions for the different events
 
   //first condition is hours is  == to 0 the valor session is 12
-  if (hh == 0) {
+  if (hh === 0) {
     hh = 12;
+
   }
 
   if (hh > 12) {
@@ -17,9 +18,9 @@ function clockTime() {
     session = "PM";
   }
 
-  hh = hh < 10 ? "0" + hh : hh;
-  mm = mm < 10 ? "0" + mm : mm;
-  ss = ss < 10 ? "0" + ss : ss;
+  hh = (hh < 10) ? "0" + hh : hh;
+  mm = (mm < 10) ? "0" + mm : mm;
+  ss = (ss < 10) ? "0" + ss : ss;
 
   let time = hh + ":" + mm + ":" + ss + " " + session;
 
